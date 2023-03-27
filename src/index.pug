@@ -1,0 +1,556 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	//-
+
+block content
+	//- include pug/data
+
+	//- .site
+	//- 	include pug/components/header
+
+	//- 	include pug/pages/home
+
+	//- 	include pug/components/footer
+
+	//- include pug/components/analytics
+	//- #progressBar.progress-bar
+	.loading-bar
+		+lazyPicture({
+			src: `${baseDir}images/loader.png`,
+			alt: 'loader',
+		}, [
+			{
+				srcset: `${baseDir}images/loader.png`,
+			}
+		]).loading-img
+			
+		.loading-overlay
+	.pr
+		.br
+			p.pct 0%
+			a.pct2(href="#")
+				<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16" id="IconChangeColor">
+				<path href="#" id="qw" class="qw" fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" id="mainIconPathAttribute" fill="#ffffff">
+				</path>
+				</svg>
+
+			<svg class="complete s" width="100" height="100" viewport="0 0 50 50" xmlns="https://www.w3.org/2000/svg">
+			<defs>
+			<linearGradient id="grad">
+			<stop offset="0%" stop-color="#4CC6C0"></stop>
+			<stop offset="100%" stop-color="#4CC6C0"></stop>
+			</linearGradient>
+			</defs>
+			<circle cx="50" cy="50" r="40"></circle>
+			<circle class="progress-bar" cx="50" cy="50" r="40"></circle>
+			</svg>
+
+	.menu__m__o
+		.wrapper
+			.four-col
+				.frame__m__open
+					.menu__m__open
+						<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+						<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+						<g id="SVGRepo_iconCarrier">
+						<path class="path__color" d="M4 17H20M4 12H20M4 7H20" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></g>
+						</svg>
+
+	.menu__wrap
+		.menu__m__close
+			<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+			<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+			<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+			<g id="SVGRepo_iconCarrier">
+			<path d="M19 5L4.99998 19M5.00001 5L19 19" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></g>
+			</svg>
+		nav.menu__m
+			a.menu__item__m
+				span.menu__item__m__text Резюме
+			a.menu__item__m
+				span.menu__item__m__text О себе
+			a.menu__item__m
+				span.menu__item__m__text Навыки
+
+	<svg class="overlay" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+	<path class="overlay__path" vector-effect="non-scaling-stroke" d="M 0 100 V 100 Q 50 100 100 100 V 100 z"></path>
+	</svg>
+
+	.over__wrapper.is-grid
+		main
+			header.menu
+				.wrapper
+					.four-col.menu__jc
+						.menu__wrapper
+							ul.menu__items
+								li.menu__items__link
+									a#link.active(href="#resume") Резюме
+										.svg__active
+											<svg width="104" height="156" viewBox="0 0 104 156" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path href="#resume" id="aa" class="svg__anim" d="M2.99985 146C58.9997 132.5 88.9999 71 94 0.999984" stroke="url(#paint0_linear_12779_10)" fill="none" stroke-width="20" pathLength="1"/>
+											<defs>
+											<linearGradient id="paint0_linear_12779_10" x1="175.577" y1="-393.879" x2="-862.693" y2="645.723" gradientUnits="userSpaceOnUse">
+											<stop offset="0.254138" stop-color="#4CC6C0" stop-opacity="0"/>
+											<stop offset="0.301521" stop-color="#4CC6C0"/>
+											<stop offset="0.341368" stop-color="#4CC6C0" stop-opacity="0"/>
+											</linearGradient>
+											</defs>
+											</svg>
+								li.menu__items__link
+									a#link(href="#experience") О себе
+										.svg__active
+											<svg width="104" height="156" viewBox="0 0 104 156" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path href="#experience" id="aa" class="" d="M2.99985 146C58.9997 132.5 88.9999 71 94 0.999984" stroke="url(#paint0_linear_12779_10)" fill="none" stroke-width="20" pathLength="1"/>
+											<defs>
+											<linearGradient id="paint0_linear_12779_10" x1="175.577" y1="-393.879" x2="-862.693" y2="645.723" gradientUnits="userSpaceOnUse">
+											<stop offset="0.254138" stop-color="#4CC6C0" stop-opacity="0"/>
+											<stop offset="0.301521" stop-color="#4CC6C0"/>
+											<stop offset="0.341368" stop-color="#4CC6C0" stop-opacity="0"/>
+											</linearGradient>
+											</defs>
+											</svg>
+								li.menu__items__link
+									a#link(href="#skill") Навыки
+										.svg__active
+											<svg width="104" height="156" viewBox="0 0 104 156" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path href="#skill" id="aa" class="" d="M2.99985 146C58.9997 132.5 88.9999 71 94 0.999984" stroke="url(#paint0_linear_12779_10)" fill="none" stroke-width="20" pathLength="1"/>
+											<defs>
+											<linearGradient id="paint0_linear_12779_10" x1="175.577" y1="-393.879" x2="-862.693" y2="645.723" gradientUnits="userSpaceOnUse">
+											<stop offset="0.254138" stop-color="#4CC6C0" stop-opacity="0"/>
+											<stop offset="0.301521" stop-color="#4CC6C0"/>
+											<stop offset="0.341368" stop-color="#4CC6C0" stop-opacity="0"/>
+											</linearGradient>
+											</defs>
+											</svg>
+
+			.page__content.page__content__resume
+				#resume.section.section__resume.section__resume__name
+					.wrapper
+						.two-col
+							.header__resume
+								+lazyPicture({
+									src: `${baseDir}images/logo.png`,
+									alt: 'logo',
+								}, [
+									{
+										srcset: `${baseDir}images/logo.png`,
+									}
+								]).header__resume__img
+
+								p.header__resume__title
+									| Вадим,
+									br
+									| HTML-Верстальщик
+
+								p.header__resume__text
+									| Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь,
+									br
+									| что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение,
+									br
+									| наблюдая за работой от идеи до дизайна, особенно когда она появляется
+									br
+									| в руках пользователя. Я считаю, что ориентированные на пользователя решения
+									br
+									| являются наиболее ценными цифровыми ресурсами будущего.
+
+						.one-col
+							.contact__resume
+								.contact__resume__text
+									p.text__mail
+										| mail@gmail.com
+
+									p.text__phone
+										| +7 (999) 000-00-00
+
+									p.text__city
+										| г. Иннополис
+
+									.contact__resume__share
+										.share__facebook
+											<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect width="25" height="25" rx="5" fill="#282A33"/>
+											<path d="M17.8617 15.8594L18.4317 12.1429H14.8659V9.73215C14.8659 8.71515 15.3631 7.72322 16.9602 7.72322H18.5824V4.55916C18.5824 4.55916 17.1109 4.30804 15.7046 4.30804C12.7666 4.30804 10.848 6.08844 10.848 9.31028V12.1429H7.5835V15.8594H10.848V24.8443C11.5034 24.9473 12.1739 25 12.857 25C13.54 25 14.2105 24.9473 14.8659 24.8443V15.8594H17.8617Z" fill="white"/>
+											</svg>
+
+										.share__vkontakte
+											<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect width="25" height="25" rx="5" fill="#282A33"/>
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M20.1184 8.53223C20.2386 8.15142 20.1184 7.87444 19.586 7.87444H17.8173C17.3708 7.87444 17.1648 8.11677 17.0446 8.37647C17.0446 8.37647 16.1344 10.5922 14.8637 12.029C14.4515 12.4444 14.2627 12.5829 14.0394 12.5829C13.9192 12.5829 13.7647 12.4444 13.7647 12.0636V8.51491C13.7647 8.06485 13.6273 7.85712 13.2495 7.85712H10.4676C10.1929 7.85712 10.0212 8.06485 10.0212 8.27258C10.0212 8.70537 10.6565 8.80921 10.7252 10.0209V12.6522C10.7252 13.2234 10.6222 13.3273 10.3989 13.3273C9.79791 13.3273 8.33829 11.0942 7.46251 8.54955C7.29076 8.04752 7.11906 7.85712 6.6726 7.85712H4.88666C4.37151 7.85712 4.28564 8.0995 4.28564 8.35915C4.28564 8.82653 4.88666 11.1808 7.08469 14.2967C8.54436 16.4259 10.6222 17.5684 12.494 17.5684C13.6273 17.5684 13.7647 17.3087 13.7647 16.876V15.2661C13.7647 14.7467 13.8677 14.6602 14.2283 14.6602C14.4859 14.6602 14.9495 14.7987 15.997 15.82C17.1991 17.0317 17.4051 17.5857 18.0749 17.5857H19.8436C20.3588 17.5857 20.5992 17.326 20.4618 16.824C20.3073 16.322 19.7234 15.595 18.9678 14.7294C18.5557 14.2448 17.9375 13.7081 17.7486 13.4484C17.491 13.1023 17.5597 12.9638 17.7486 12.6522C17.7315 12.6522 19.8951 9.57089 20.1184 8.53223Z" fill="white"/>
+											</svg>
+
+										.share__telegram
+											<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect width="25" height="25" rx="5" fill="#282A33"/>
+											<path d="M5.22189 12.0884C6.72488 11.2605 8.40263 10.5695 9.97024 9.87505C12.6671 8.73751 15.3747 7.61969 18.1097 6.57901C18.6418 6.40169 19.5979 6.22828 19.6916 7.01685C19.6403 8.13306 19.4291 9.24274 19.2843 10.3524C18.9166 12.7927 18.4917 15.2246 18.0773 17.6569C17.9345 18.467 16.9196 18.8865 16.2702 18.368C14.7096 17.3138 13.137 16.2699 11.5962 15.1913C11.0915 14.6785 11.5595 13.942 12.0103 13.5758C13.2957 12.3091 14.6589 11.2328 15.8771 9.9006C16.2057 9.10704 15.2348 9.77583 14.9145 9.98074C13.1548 11.1934 11.4382 12.4801 9.58287 13.5458C8.63519 14.0675 7.53065 13.6217 6.5834 13.3306C5.73407 12.9789 4.48949 12.6247 5.22181 12.0885L5.22189 12.0884Z" fill="white"/>
+											</svg>
+
+				#experience.section.section__resume.section__resume__experience
+					.resume__experience
+						.wrapper
+							.two-col.flex-col
+								p.header__title__sample
+									| Опыт работы
+								.experience__sample
+									p.experience__sample__data__title
+										| Июль 2019
+									.experience__sample__job__title
+										p.experience__sample__job__text
+											| Freelance Designer
+										+lazyPicture({
+											src: `${baseDir}images/img.png`,
+											alt: 'img',
+										}, [
+											{
+												srcset: `${baseDir}images/img.png`,
+											}
+										]).experience__sample__job__img
+
+									p.experience__sample__city__title
+										| Netherlands, Worldwide
+
+									.experience__sample__text__title
+										p.experience__sample__text
+											| Available for a project or job in UX/UI, Visual and Product design.
+
+										p.experience__sample__text__link
+											a(href="#") Commercial tryouts
+
+										p.experience__sample__text__link
+											a(href="#") Personal projects
+
+								.experience__sample
+									p.experience__sample__data__title
+										| Январь 2017 - Сентябрь 2018
+									.experience__sample__job__title
+										p.experience__sample__job__text
+											| Digital Designer
+										+lazyPicture({
+											src: `${baseDir}images/img-2.png`,
+											alt: 'img-2',
+										}, [
+											{
+												srcset: `${baseDir}images/img-2.png`,
+											}
+										]).experience__sample__job__img
+
+									.experience__sample__job__title
+										+lazyPicture({
+											src: `${baseDir}images/jcs.png`,
+											alt: 'jcs',
+										}, [
+											{
+												srcset: `${baseDir}images/jcs.png`,
+											}
+										]).experience__sample__job__img
+
+										p.experience__sample__job__text
+											| J Creative Solutions
+
+										p.experience__sample__city__title
+											| Digital agency in Minsk, Belarus
+
+									.experience__sample__text__title
+										p.experience__sample__text
+											| Created visuals for digital marketing channels such as social media, promo web
+											br
+											| and online ads. Developed visual language from scratch or following the branding
+											br
+											| guidelines. Designed presentations for clients and indoor purposes.
+
+										p.experience__sample__text__link
+											a(href="#") Agency projects
+
+								.experience__sample
+									p.experience__sample__data__title
+										| Март 2014 - Февраль 2017
+									.experience__sample__job__title
+										p.experience__sample__job__text
+											| SEO Specialist → Lead SEO Specialist
+										+lazyPicture({
+											src: `${baseDir}images/img-3.png`,
+											alt: 'img-3',
+										}, [
+											{
+												srcset: `${baseDir}images/img-3.png`,
+											}
+										]).experience__sample__job__img
+
+									.experience__sample__job__title
+										+lazyPicture({
+											src: `${baseDir}images/oz.png`,
+											alt: 'oz',
+										}, [
+											{
+												srcset: `${baseDir}images/oz.png`,
+											}
+										]).experience__sample__job__img
+
+										p.experience__sample__job__text
+											| OZ.by
+
+										p.experience__sample__city__title
+											| Online bookstore in Minsk, Belarus
+
+									.experience__sample__text__title
+										p.experience__sample__text
+											| Improved website performance and user experience of the biggest online bookstore
+											br
+											| OZ in Belarus, being a part of the marketing team, I interpreted Google Analytics data
+											br
+											| to IT, content and marketing colleagues. Advised on tech and content optimization
+											br
+											| strategy, automated processes, provided reports, increased organic traffic up to 150%.
+
+										p.experience__sample__text__link
+											a(href="#") Annual company report 2016
+
+								.experience__sample
+									p.experience__sample__data__title
+										| Август 2012 - Ноябрь 2013
+									.experience__sample__job__title
+										p.experience__sample__job__text
+											| Content Specialist
+										+lazyPicture({
+											src: `${baseDir}images/img-4.png`,
+											alt: 'img-4',
+										}, [
+											{
+												srcset: `${baseDir}images/img-4.png`,
+											}
+										]).experience__sample__job__img
+
+									.experience__sample__job__title
+										+lazyPicture({
+											src: `${baseDir}images/21vek.png`,
+											alt: '21vek',
+										}, [
+											{
+												srcset: `${baseDir}images/21vek.png`,
+											}
+										]).experience__sample__job__img
+
+										p.experience__sample__job__text
+											| 21vek.by
+
+										p.experience__sample__city__title
+											| E-commerce store in Minsk, Belarus
+
+									.experience__sample__text__title
+										p.experience__sample__text
+											| Added and modified the product information, prepared images and text
+											br
+											| for the website, developed categories filters, ensure all info is correct in the catalogue
+											br
+											| with the goal of improving online shopper experience.
+
+								.experience__sample
+									p.experience__sample__data__title
+										| Август 2011 - Ноябрь 2014
+									.experience__sample__job__title
+										p.experience__sample__job__text
+											| Software Support Engineer
+										+lazyPicture({
+											src: `${baseDir}images/img-5.png`,
+											alt: 'img-5',
+										}, [
+											{
+												srcset: `${baseDir}images/img-5.png`,
+											}
+										]).experience__sample__job__img
+
+									.experience__sample__job__title
+										+lazyPicture({
+											src: `${baseDir}images/integral.png`,
+											alt: 'integral',
+										}, [
+											{
+												srcset: `${baseDir}images/integral.png`,
+											}
+										]).experience__sample__job__img
+
+										p.experience__sample__job__text
+											| Integral
+
+										p.experience__sample__city__title
+											| Microelectronics factory in Minsk, Belarus
+
+									.experience__sample__text__title
+										p.experience__sample__text
+											| Supported retail accounting system LS Trade, troubleshoot technical problems.
+
+							.one-col
+								canvas.webgl
+
+							.one-col.align__center
+								p.header__title__sample
+									| Образование
+
+								.wrapper__school__sample
+									.school__sample
+										+lazyPicture({
+											src: `${baseDir}images/img-6.png`,
+											alt: 'img-6',
+										}, [
+											{
+												srcset: `${baseDir}images/img-6.png`,
+											}
+										]).school__sample__img
+										p.school__sample__title
+											| Interface Design:
+											br
+											| Web & Mobile
+										p.school__sample__text
+											| IT-Academy, 2020
+
+									.school__sample
+										+lazyPicture({
+											src: `${baseDir}images/img-7.png`,
+											alt: 'img-7',
+										}, [
+											{
+												srcset: `${baseDir}images/img-7.png`,
+											}
+										]).school__sample__img
+										p.school__sample__title
+											| Fundamentals
+											br
+											| of Usability
+										p.school__sample__text
+											| Skillshare, Oct 2018
+
+									.school__sample
+										+lazyPicture({
+											src: `${baseDir}images/img-8.png`,
+											alt: 'img-8',
+										}, [
+											{
+												srcset: `${baseDir}images/img-8.png`,
+											}
+										]).school__sample__img
+										p.school__sample__title
+											| CG Artist
+										p.school__sample__text
+											| Polygon CG School, 
+											br
+											| May-Sep 2017
+
+									.school__sample
+										+lazyPicture({
+											src: `${baseDir}images/img-9.png`,
+											alt: 'img-9',
+										}, [
+											{
+												srcset: `${baseDir}images/img-9.png`,
+											}
+										]).school__sample__img
+										p.school__sample__title
+											| Graphic Design
+										p.school__sample__text
+											| Belarusian State
+											br
+											| Academy of Arts,
+											br
+											| 2015 - 2017
+											br
+											| Postgraduate Diploma
+
+									.school__sample
+										+lazyPicture({
+											src: `${baseDir}images/img-10.png`,
+											alt: 'img-10',
+										}, [
+											{
+												srcset: `${baseDir}images/img-10.png`,
+											}
+										]).school__sample__img
+										p.school__sample__title
+											| SEO Specialist
+											br
+											| Web & Mobile
+										p.school__sample__text
+											| ARTOX Media,
+											br
+											| Jun-Aug 2012
+
+									.school__sample
+										+lazyPicture({
+											src: `${baseDir}images/img-11.png`,
+											alt: 'img-11',
+										}, [
+											{
+												srcset: `${baseDir}images/img-11.png`,
+											}
+										]).school__sample__img
+										p.school__sample__title
+											| Information
+											br
+											| Technology Software
+										p.school__sample__text
+											| Belarusian State
+											br
+											| University of Informatics
+											br
+											| and Radioelectronics,
+											br
+											| 2011 - 2015
+											br
+											| Bachelor’s degree
+											br
+											| Polotsk State Economic
+											br
+											| College, 2007 - 2011
+											br
+											| Associate’s degree
+
+				#skill.section.section__resume.section__resume__skill
+					.resume__skill
+						.wrapper
+							.four-col
+								p.header__title__sample
+									| Навыки
+						.wrapper
+							.one-col
+								.skill__sample
+									p.skill__sample__title
+										| Adobe Creative Suite
+									p.skill__sample__text
+										| Photoshop, Illustrator, InDesign, XD, After Effects
+
+							.one-col
+								.skill__sample
+									p.skill__sample__title
+										| Prototyping
+									p.skill__sample__text
+										| Sketch, Figma, InVision, Marvel, Principle, Balsamiq
+
+							.one-col
+								.skill__sample
+									p.skill__sample__title
+										| Additional
+									p.skill__sample__text
+										| HTML, CSS, Google Analytics, Keynote, Miro
+
+							.one-col
+								.skill__sample
+									p.skill__sample__title
+										| Languages
+									p.skill__sample__text
+										| Conversational English and Native Russian
+
+				//- .section.section__resume.section__resume__like
+				//- 	.resume__like
+				//- 		.row
+				//- 			.col-4.align__center
+				//- 				+lazyPicture({
+				//- 					src: `${baseDir}images/img-12.png`,
+				//- 					alt: 'img-11',
+				//- 				}, [
+				//- 					{
+				//- 						srcset: `${baseDir}images/img-12.png`,
+				//- 					}
+				//- 				]).resume__like__img
